@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="myCSS">
+<head>
+<meta charset="ISO-8859-1">
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+
+
+<title>Login</title>
+</head> 
+<div ng-controller="LoginController as login">
+
+<div class="wrapper">
+    <form class="form-horizontal" name="loginForm"  role="form"
+		ng-submit=" login.doLogin()">
+		<div class="col-md-12 col-md-offset-4">   
+		<div class="form-group">    
+      <h2 class="form-signin-heading">Please login</h2>
+      <div class="col-xs-3">
+      <input type="text" class="form-control" name="username" placeholder="User Name" ng-model="login.user.username"
+        required="" autofocus="" /><br>
+        </div>
+        </div>
+        <div class="form-group">
+        <div class="col-xs-3">
+      <input type="password" class="form-control" name="password" placeholder="Password" ng-model="login.user.password"
+       required=""/> <br>     
+      </div>
+      </div>
+     	<div class="form-group">
+			<div class="col-md-3 text-center">
+				<input type="submit" name="submit" value="Login" />
+			</div>
+		</div>
+       </div>  
+    </form>
+    
+  </div>
+
+</div>
+</html>
